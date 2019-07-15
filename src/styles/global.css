@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Karla|Montserrat:400,600,700,900&display=swap");
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+* {
+  @apply font-display;
+}
+
+p {
+  @apply font-body;
+}
+
+h1,
+h2,
+h3 {
+  @apply text-deepBlue;
+}
+
+.hover-up {
+  transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+
+.hover-up:hover {
+  box-shadow: rgba(50, 50, 93, 0.1) 0 7px 14px, rgba(0, 0, 0, 0.08) 0 3px 6px;
+  transform: translateY(-2px);
+}
