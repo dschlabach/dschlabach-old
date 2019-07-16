@@ -2,10 +2,6 @@
 
 @tailwind base;
 
-@tailwind components;
-
-@tailwind utilities;
-
 * {
   @apply font-display;
 }
@@ -19,6 +15,10 @@ h2,
 h3 {
   @apply text-deepBlue;
 }
+
+@tailwind components;
+
+@tailwind utilities;
 
 .hover-up {
   transition-delay: 0s;
