@@ -22,12 +22,10 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="mx-4 mt-10">
-        <h1 className="text-5-1/2xl sm:text-6xl lg:text-xxl leading-none font-black text-deepBlue">
-          Daniel <br></br> Schlabach
+        <h1 className="text-5-1/2xl sm:text-6xlleading-none font-black text-deepBlue">
+          Daniel Schlabach
         </h1>
-        <p className="mt-2 text-blue lg:text-xl">
-          Web Developer | Durham, North Carolina
-        </p>
+        <p className="mt-2 text-blue lg:text-xl">Durham, North Carolina</p>
       </div>
       <section className="mt-8 mx-4">
         <h2 className="font-bold text-4xl">Projects</h2>

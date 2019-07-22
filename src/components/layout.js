@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header siteTitle={data.site.siteMetadata.title} />
       <div className="mx-auto flex-1 flex flex-col content-center container lg:max-w-3xl">
         <main className="w-full flex-1">{children}</main>
         <footer className="mt-4 text-center py-2 font-body">
