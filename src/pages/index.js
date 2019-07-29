@@ -9,7 +9,14 @@ import SEO from "../components/seo"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "Mt-Fluency.png" }) {
+      mountFluency: file(relativePath: { eq: "Mt-Fluency.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Filtrd: file(relativePath: { eq: "FiltrdLogo.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -32,7 +39,10 @@ const IndexPage = () => {
         <div className="mt-2">
           <a href="https://filtrd.co" className="cursor-pointer">
             <div className="my-4 p-2 max-w-2xl flex hover-up border border-gray-400 shadow-md rounded">
-              <div className="hidden sm:block h-32 w-48 bg-blue rounded"></div>
+              <Img
+                className="hidden sm:block h-32 w-48 bg-blue border rounded"
+                fluid={data.Filtrd.childImageSharp.fluid}
+              />
               <div className="sm:ml-6 flex flex-col">
                 <h3 className="font-semibold text-xl">Filtrd</h3>
                 <p>
@@ -45,7 +55,7 @@ const IndexPage = () => {
             <div className="my-4 p-2 max-w-2xl flex hover-up border border-gray-400 shadow-md rounded">
               <Img
                 className="hidden sm:block h-32 w-48 bg-blue border rounded"
-                fluid={data.placeholderImage.childImageSharp.fluid}
+                fluid={data.mountFluency.childImageSharp.fluid}
               />
               <div className="sm:ml-6 flex flex-col">
                 <h3 className="font-semibold text-xl">Mount Fluency</h3>
@@ -186,7 +196,15 @@ const IndexPage = () => {
       </section>
       <section className="my-8 mx-4">
         <h2 className="font-bold text-4xl">Contact Me</h2>
-        <p>You can reach me at daniel.schlabach3@gmail.com</p>
+        <p>
+          You can reach me at{" "}
+          <a
+            className="font-body text-base underline text-blue-600"
+            href="mailto:daniel.schlabach3@gmail.com"
+          >
+            daniel.schlabach3@gmail.com.
+          </a>
+        </p>
       </section>
     </Layout>
   )
