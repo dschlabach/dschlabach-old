@@ -29,7 +29,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="mx-4 mt-10">
-        <h1 className="text-5-1/2xl sm:text-6xlleading-none font-black text-deepBlue">
+        <h1 className="text-5-1/2xl sm:text-6xl leading-none font-black text-deepBlue">
           Daniel Schlabach
         </h1>
         <p className="mt-2 text-blue lg:text-xl">Durham, North Carolina</p>
@@ -196,15 +196,36 @@ const IndexPage = () => {
       </section>
       <section className="my-8 mx-4">
         <h2 className="font-bold text-4xl">Contact Me</h2>
-        <p>
-          You can reach me at{" "}
-          <a
-            className="font-body text-base underline text-blue-600"
-            href="mailto:daniel.schlabach3@gmail.com"
-          >
-            daniel.schlabach3@gmail.com.
-          </a>
-        </p>
+        <form name="contact" netlify>
+          <div className="flex flex-col">
+            <input
+              className="max-w-md h-8 my-2 border border-gray-400 rounded px-3"
+              type="text"
+              name="name"
+              placeholder="Name"
+            />
+
+            <input
+              className="max-w-md h-8 my-2 border border-gray-400 rounded px-3"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+
+            <textarea
+              className="max-w-md h-20 lg:h-24 my-2 mb-4 border border-gray-400 rounded px-3 pt-2"
+              name="message"
+              placeholder="Message"
+            />
+
+            <button
+              className="hover-up-sm shadow-lg max-w-md bg-deepBlue text-white uppercase tracking-wider rounded py-2 font-semibold"
+              type="submit"
+            >
+              Send
+            </button>
+          </div>
+        </form>
       </section>
     </Layout>
   )
