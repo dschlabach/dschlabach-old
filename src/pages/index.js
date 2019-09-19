@@ -204,6 +204,8 @@ const IndexPage = () => {
         <h2 className="font-bold text-4xl">Contact Me</h2>
         <form name="contact" netlify data-netlify="true">
           <div className="flex flex-col">
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+            <input type="hidden" name="form-name" value="contact" />
             <input
               className="max-w-md h-8 my-2 border border-gray-400 rounded px-3"
               type="text"
