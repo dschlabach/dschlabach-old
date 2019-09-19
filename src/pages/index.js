@@ -196,7 +196,7 @@ const IndexPage = () => {
       </section>
       <section className="my-8 mx-4">
         <h2 className="font-bold text-4xl">Contact Me</h2>
-        <form name="contact" netlify>
+        <form name="contact" netlify data-netlify="true">
           <div className="flex flex-col">
             <input
               className="max-w-md h-8 my-2 border border-gray-400 rounded px-3"
