@@ -34,6 +34,12 @@ const IndexPage = () => {
         </h1>
         <p className="mt-2 text-blue lg:text-xl">Durham, North Carolina</p>
       </div>
+      <section className="hidden mt-8 mx-4">
+        <h2 className="font-bold text-4xl">
+          <Link to="/blog">Blog</Link>
+        </h2>
+        <div className="mt-2"></div>
+      </section>
       <section className="mt-8 mx-4">
         <h2 className="font-bold text-4xl">Projects</h2>
         <div className="mt-2">
