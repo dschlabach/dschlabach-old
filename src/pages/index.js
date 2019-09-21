@@ -23,8 +23,24 @@ const IndexPage = () => {
           }
         }
       }
+      allMarkdownRemark(limit: 3) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              date(formatString: "MMMM DD, YYYY")
+              description
+            }
+            timeToRead
+          }
+        }
+      }
     }
   `)
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -34,11 +50,25 @@ const IndexPage = () => {
         </h1>
         <p className="mt-2 text-blue lg:text-xl">Durham, North Carolina</p>
       </div>
-      <section className="hidden mt-8 mx-4">
+      <section className="mt-8 mx-4">
         <h2 className="font-bold text-4xl">
           <Link to="/blog">Blog</Link>
         </h2>
-        <div className="mt-2"></div>
+        <div className="mt-2 px-1">
+          {data.allMarkdownRemark.edges.map(post => {
+            return (
+              <Link
+                className="w-full shadow"
+                key={post.node.fields.slug}
+                to={post.node.fields.slug}
+              >
+                <h3 className="font-semibold text-2xl text-blue hover:underline">
+                  {post.node.frontmatter.title}
+                </h3>
+              </Link>
+            )
+          })}
+        </div>
       </section>
       <section className="mt-8 mx-4">
         <h2 className="font-bold text-4xl">Projects</h2>
@@ -202,7 +232,7 @@ const IndexPage = () => {
       </section>
       <section className="my-8 mx-4">
         <h2 className="font-bold text-4xl">Contact Me</h2>
-        <form name="contact" netlify data-netlify="true">
+        <form name="contact" data-netlify="true">
           <div className="flex flex-col">
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
