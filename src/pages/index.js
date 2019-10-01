@@ -235,7 +235,7 @@ const IndexPage = () => {
           className="flex items-center hover:text-pink"
           to="/Daniel Schlabach Resume Sep 2019.pdf"
         >
-          <h2 className="font-bold text-4xl flex items-center">
+          <h2 className="font-bold text-4xl flex items-center hover:text-pink">
             Resume
             <svg
               xmlns="http://www.w3.org/2000/svg"
