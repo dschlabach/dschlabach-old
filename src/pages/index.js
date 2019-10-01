@@ -231,9 +231,9 @@ const IndexPage = () => {
         </div>
       </section>
       <section className="my-8 mx-4">
-        <Link
+        <a
           className="flex items-center hover:text-pink"
-          to="/Daniel Schlabach Resume Sep 2019.pdf"
+          href="dschlabach.com/Daniel Schlabach Resume Sep 2019.pdf"
         >
           <h2 className="font-bold text-4xl flex items-center hover:text-pink">
             Resume
@@ -250,7 +250,7 @@ const IndexPage = () => {
               />
             </svg>
           </h2>
-        </Link>
+        </a>
       </section>
       <section className="my-8 mx-4">
         <h2 className="font-bold text-4xl">Contact Me</h2>
