@@ -23,6 +23,13 @@ const IndexPage = () => {
           }
         }
       }
+      ReadAlong: file(relativePath: { eq: "ReadAlong.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       allMarkdownRemark(limit: 3) {
         edges {
           node {
@@ -73,6 +80,18 @@ const IndexPage = () => {
       <section className="mt-8 mx-4">
         <h2 className="font-bold text-4xl">Projects</h2>
         <div className="mt-2">
+          <a href="https://readalong.netlify.com" className="cursor-pointer">
+            <div className="my-4 p-2 max-w-2xl flex hover-up border border-gray-400 shadow-md rounded">
+              <Img
+                className="hidden sm:block h-32 w-48 bg-blue border rounded"
+                fluid={data.ReadAlong.childImageSharp.fluid}
+              />
+              <div className="sm:ml-6 flex flex-col">
+                <h3 className="font-semibold text-xl">ReadAlong</h3>
+                <p>Better dual language reading.</p>
+              </div>
+            </div>
+          </a>
           <a href="https://filtrd.co" className="cursor-pointer">
             <div className="my-4 p-2 max-w-2xl flex hover-up border border-gray-400 shadow-md rounded">
               <Img
