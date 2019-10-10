@@ -250,7 +250,7 @@ const IndexPage = () => {
         </div>
       </section>
       <section className="my-8 mx-4">
-        <a href="/Daniel Schlabach Resume Sep 2019.pdf">
+        <a href="/Daniel Schlabach Resume Oct 2019.pdf">
           <h2 className="font-bold text-4xl flex items-center hover:text-pink">
             Resume
             <svg
