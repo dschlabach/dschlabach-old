@@ -106,7 +106,7 @@ const IndexPage = () => {
               </div>
             </div>
           </a>
-          <a href="https://mountfluency.com" className="cursor-pointer">
+          <a href="#" className="cursor-pointer">
             <div className="my-4 p-2 max-w-2xl flex hover-up border border-gray-400 shadow-md rounded">
               <Img
                 className="hidden sm:block h-32 w-48 bg-blue border rounded"
@@ -114,7 +114,10 @@ const IndexPage = () => {
               />
               <div className="sm:ml-6 flex flex-col">
                 <h3 className="font-semibold text-xl">Mount Fluency</h3>
-                <p>A smart flashcards app for learning languages.</p>
+                <p>
+                  A smart flashcards app for learning languages. This project is
+                  no longer online.
+                </p>
               </div>
             </div>
           </a>
@@ -249,7 +252,7 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <section className="my-8 mx-4">
+      <section className="hidden my-8 mx-4">
         <a href="/Daniel Schlabach Resume Oct 2019.pdf">
           <h2 className="font-bold text-4xl flex items-center hover:text-pink">
             Resume

@@ -88,12 +88,12 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article className="mt-6">
+        <article className="markdown mt-6">
           <header>
             <h1 className="font-bold text-3xl">{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.date}</p>
+            <p className="text-base -mt-px">{post.frontmatter.date}</p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section class dangerouslySetInnerHTML={{ __html: post.html }} />
           <footer>{/* <Bio /> */}</footer>
         </article>
 
