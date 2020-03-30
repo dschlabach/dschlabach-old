@@ -10,9 +10,13 @@ I run a [Shopify store that sells outdoor furniture](https://monarchpatio.com).
 
 I use tags on my Shopify store to make unique collections. For example, I have some products that are part of a _Heritage_ collection or others that are part of a _Classic_ collection. I could make those collections work by using the _Type_ option, but I have the _Type_ classifer being used to identify things like _Chairs_, _Swings_, etc.
 
-I also use Shopify tags to make some things work on my store's back end. For example, I use the app _Infinite Options_ to add customization features for some of my products. I have some products that need the ability to choose two colors. Other products need the option to customize cushion colors, so I have a different tag for that. Infinite Options looks for these tags
+I also use Shopify tags to make some things work on my store's back end. For example, I use the app _Infinite Options_ to add customization features for some of my products. I have some products that need the ability to choose two colors. Other products need the option to customize cushion colors, so I have a different tag for that. Infinite Options looks for these tags and applies the app to only the relevant products.
 
 The problem is that these tags were showing up in the _Browse By_ filter on my collections pages. I didn't want my customers to be able to see these filter options because it looked unprofessional. I couldn't just delete the tags because it would break functionality on my website.
+
+![Collections Page with Extra Options](/collections-page-with-extra-tags.png)
+
+<!-- ![Extra Tags in Browse By Option](/with-extra-tags.png) -->
 
 You can remove these fairly easily with 2 lines of Liquid. For reference, I am using the _Minimal_ theme by Shopify on my website.
 
@@ -89,5 +93,7 @@ Here's what we'll add to filter those out:
 ```
 
 This should filter out specific tags for your customers and still allow you to use them on the back end of your store.
+
+![Tags Filtered Out in Browse By Option](/tags-filtered-out.png)
 
 Any questions? Let me know at daniel.schlabach3 [at] gmail [dot] com.

@@ -50,6 +50,10 @@ strong {
 .markdown ul {
   @apply list-disc pl-4;
 }
+
+.markdown img {
+  @apply shadow-xl rounded-lg border-gray-500;
+}
 @tailwind components;
 
 @tailwind utilities;
