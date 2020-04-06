@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -29,6 +29,9 @@ const Layout = ({ children }) => {
       <div className="mx-auto flex-1 flex flex-col content-center container lg:max-w-3xl">
         <main className="w-full flex-1">{children}</main>
         <footer className="mt-4 text-center py-2 font-body">
+          <Link className="mx-2 font-body underline" to="/blog/">
+            Articles
+          </Link>
           © {new Date().getFullYear()}, Daniel Schlabach
         </footer>
       </div>

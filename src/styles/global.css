@@ -24,6 +24,10 @@ h3 {
   @apply text-deepBlue;
 }
 
+.markdown {
+  @apply px-2;
+}
+
 .markdown h1 {
   @apply font-black text-4xl leading-snug;
 }
@@ -200,9 +204,12 @@ pre[class*="language-"] ::selection {
 }
 
 .token.tag,
-.token.operator,
 .token.keyword {
   color: #d1495b;
+}
+
+.token.operator {
+  color: rgb(255, 203, 139);
 }
 
 .token.boolean {
