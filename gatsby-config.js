@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Daniel Schlabach`,
-    description: `Building filtrd.co.`,
+    description: `Daniel Schlabach's personal site.`,
     author: `@dmschlabach`,
   },
   plugins: [
