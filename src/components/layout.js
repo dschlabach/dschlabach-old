@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
@@ -28,8 +28,11 @@ const Layout = ({ children }) => {
     <div className="min-h-screen flex flex-col">
       <div className="mx-auto flex-1 flex flex-col content-center container lg:max-w-3xl">
         <main className="w-full flex-1">{children}</main>
-        <footer className="mt-4 text-center py-2 font-body">
-          © {new Date().getFullYear()}, Daniel Schlabach
+        <footer className="mt-4 flex justify-center py-2 font-body">
+          <Link to="/crypto" className="mx-4 underline">
+            Crypto
+          </Link>
+          <div>© {new Date().getFullYear()}, Daniel Schlabach</div>
         </footer>
       </div>
     </div>

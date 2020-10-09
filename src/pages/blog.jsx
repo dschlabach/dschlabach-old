@@ -24,7 +24,6 @@ const BlogPostsPage = () => {
       }
     }
   `)
-  console.log(data.allMarkdownRemark)
 
   return (
     <BlogLayout>
