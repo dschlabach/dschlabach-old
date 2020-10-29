@@ -252,25 +252,6 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <section className="hidden my-8 mx-4">
-        <a href="/Daniel Schlabach Resume Oct 2019.pdf">
-          <h2 className="font-bold text-4xl flex items-center hover:text-pink">
-            Resume
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              className="ml-2 fill-current "
-            >
-              <path
-                fillRule="evenodd"
-                d="M15,3.41421356 L15,7 L18.5857864,7 L15,3.41421356 Z M19,9 L15,9 C13.8954305,9 13,8.1045695 13,7 L13,3 L5,3 L5,21 L19,21 L19,9 Z M5,1 L15.4142136,1 L21,6.58578644 L21,21 C21,22.1045695 20.1045695,23 19,23 L5,23 C3.8954305,23 3,22.1045695 3,21 L3,3 C3,1.8954305 3.8954305,1 5,1 Z M11,14.5857864 L11,10 L13,10 L13,14.5857864 L14.2928932,13.2928932 L15.7071068,14.7071068 L12,18.4142136 L8.29289322,14.7071068 L9.70710678,13.2928932 L11,14.5857864 Z"
-              />
-            </svg>
-          </h2>
-        </a>
-      </section>
       <section className="my-8 mx-4">
         <h2 className="font-bold text-4xl">Contact Me</h2>
         <form name="contact" data-netlify="true">
