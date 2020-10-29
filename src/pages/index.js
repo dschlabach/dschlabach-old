@@ -30,6 +30,13 @@ const IndexPage = () => {
           }
         }
       }
+      Broca: file(relativePath: { eq: "broca_logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       allMarkdownRemark(limit: 3) {
         edges {
           node {
@@ -80,12 +87,29 @@ const IndexPage = () => {
       <section className="mt-8 mx-4">
         <h2 className="font-bold text-4xl">Projects</h2>
         <div className="mt-2">
-          <a href="https://readalong.netlify.com" className="cursor-pointer">
+          <a href="https://readbroca.com" className="cursor-pointer">
             <div className="my-4 p-2 max-w-2xl flex hover-up border border-gray-400 shadow-md rounded">
-              <Img
-                className="hidden sm:block h-32 w-48 bg-blue border rounded"
-                fluid={data.ReadAlong.childImageSharp.fluid}
-              />
+              <div className="w-0 sm:w-48">
+                <Img
+                  className="hidden sm:block h-32 w-48 rounded"
+                  fluid={data.Broca.childImageSharp.fluid}
+                  imgStyle={{ objectFit: "contain" }}
+                />
+              </div>
+              <div className="sm:ml-6 flex flex-col">
+                <h3 className="font-semibold text-xl">Broca</h3>
+                <p>A blog about language learning.</p>
+              </div>
+            </div>
+          </a>
+          <a href="https://readalong.io" className="cursor-pointer">
+            <div className="my-4 p-2 max-w-2xl flex hover-up border border-gray-400 shadow-md rounded">
+              <div className="w-0 sm:w-48">
+                <Img
+                  className="hidden sm:block h-32 w-48 bg-blue border rounded"
+                  fluid={data.ReadAlong.childImageSharp.fluid}
+                />{" "}
+              </div>
               <div className="sm:ml-6 flex flex-col">
                 <h3 className="font-semibold text-xl">ReadAlong</h3>
                 <p>Better dual language reading.</p>
@@ -94,10 +118,12 @@ const IndexPage = () => {
           </a>
           <a href="https://filtrd.co" className="cursor-pointer">
             <div className="my-4 p-2 max-w-2xl flex hover-up border border-gray-400 shadow-md rounded">
-              <Img
-                className="hidden sm:block h-32 w-48 bg-blue border rounded"
-                fluid={data.Filtrd.childImageSharp.fluid}
-              />
+              <div className="w-0 sm:w-48">
+                <Img
+                  className="hidden sm:block h-32 w-48 bg-blue border rounded"
+                  fluid={data.Filtrd.childImageSharp.fluid}
+                />
+              </div>{" "}
               <div className="sm:ml-6 flex flex-col">
                 <h3 className="font-semibold text-xl">Filtrd</h3>
                 <p>
@@ -108,15 +134,17 @@ const IndexPage = () => {
           </a>
           <a href="#" className="cursor-pointer">
             <div className="my-4 p-2 max-w-2xl flex hover-up border border-gray-400 shadow-md rounded">
-              <Img
-                className="hidden sm:block h-32 w-48 bg-blue border rounded"
-                fluid={data.mountFluency.childImageSharp.fluid}
-              />
+              <div className="w-0 sm:w-48">
+                <Img
+                  className="hidden sm:block h-32 w-48  bg-blue border rounded"
+                  fluid={data.mountFluency.childImageSharp.fluid}
+                />
+              </div>
               <div className="sm:ml-6 flex flex-col">
                 <h3 className="font-semibold text-xl">Mount Fluency</h3>
                 <p>
                   A smart flashcards app for learning languages. This project is
-                  no longer online.
+                  no longer online, but the code can be shared upon request.
                 </p>
               </div>
             </div>

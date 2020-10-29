@@ -28,11 +28,19 @@ const Layout = ({ children }) => {
     <div className="min-h-screen flex flex-col">
       <div className="mx-auto flex-1 flex flex-col content-center container lg:max-w-3xl">
         <main className="w-full flex-1">{children}</main>
+<<<<<<< HEAD
         <footer className="mt-4 flex justify-center py-2 font-body">
           <Link to="/crypto" className="mx-4 underline">
             Crypto
           </Link>
           <div>© {new Date().getFullYear()}, Daniel Schlabach</div>
+=======
+        <footer className="mt-4 text-center py-2 font-body">
+          <Link className="mx-2 font-body underline" to="/blog/">
+            Articles
+          </Link>
+          © {new Date().getFullYear()}, Daniel Schlabach
+>>>>>>> 80ad0b8a07b9a07600ef0d34462a3d85fe2eb658
         </footer>
       </div>
     </div>

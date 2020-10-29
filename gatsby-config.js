@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Daniel Schlabach`,
-    description: `Building filtrd.co.`,
+    description: `Daniel Schlabach's personal site.`,
     author: `@dmschlabach`,
   },
   plugins: [
@@ -35,7 +35,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: true,
+            },
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],

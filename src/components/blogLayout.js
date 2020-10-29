@@ -25,6 +25,9 @@ const BlogLayout = ({ children }) => {
           {children}
         </main>
         <footer className="mt-4 text-center py-2 font-body">
+          <Link className="mx-2 font-body underline" to="/blog/">
+            Articles
+          </Link>
           © {new Date().getFullYear()}, Daniel Schlabach
         </footer>
       </div>

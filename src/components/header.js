@@ -6,7 +6,9 @@ const Header = ({ siteTitle }) => (
   <header className="flex text-deepBlue font-semibold font-display ">
     <div className="py-3 mx-4 sm:mx-0">
       <h1 className="text-2xl md:text-3xl leading-none font-black text-deepBlue">
-        <Link to="/">{siteTitle}</Link>
+        <Link className="font-display" to="/">
+          {siteTitle}
+        </Link>
       </h1>
     </div>
   </header>
